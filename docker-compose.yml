@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
       - "35729:35729"
-    container_name: web_1
+    container_name: demo_container_1
     restart: on-failure
     volumes:
       - .:/app
