@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+      - "35729:35729"
+    container_name: web_1
+    restart: on-failure
+    volumes:
+      - .:/app
+    environment:
+      - API_URL=http://127.0.0.1:9000
+      - NODE_ENV=development
+      - PORT=3000
